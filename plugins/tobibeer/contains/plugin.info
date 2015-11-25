@@ -1,0 +1,12 @@
+{
+    "title": "$:/plugins/tobibeer/contains",
+    "description": "Filter titles/listfields containing a value or any/all values from a list",
+    "author": "Tobias Beer",
+    "version": "0.5.0",
+    "core-version": ">=5.1.9",
+    "source": "https://github.com/tobibeer/tw5-contains",
+    "documentation": "https://tobibeer.github.io/tw5-contains",
+    "plugin-type": "plugin",
+	"dependents": "",
+	"list": "readme"
+}

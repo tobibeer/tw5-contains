@@ -1,0 +1,20 @@
+title: $:/plugins/tobibeer/contains/readme
+
+\define intro(which) <br>//@@color:grey;returns $which$...@@//
+\define case(code, summary)
+//@@color:grey;$summary$:@@//<br>
+`$code$`
+\end
+
+Provides the ''contains[]'' [[filter operator|http://tiddlywiki.com#Filters]] returning those titles where the title or titles in a list field contain a value or any/all values from another list.
+
+!! Variants
+
+# ''Compare input titles against title(s) in the operand:''<<intro "all ''input titles'', unmodified, if the input titles...">>
+## <<case "contains[<value>]" "contain ''&lt;value>''">>
+## <<case "contains:$any[<list>]" "contain ''any'' titles in ''&lt;list>''">>
+## <<case "contains:$all[<list>]" "contain ''all'' titles in ''&lt;list>''">>
+# ''Compare list fields of input titles against title(s) in the operand:''<<intro "those input titles where the ''&lt;listfield>''">>
+## <<case "contains:<listfield>[<value>]" "contains ''&lt;value>''">>
+## <<case "contains:<listfield> $any[<list>]" "contains ''any'' titles in ''&lt;list>''">>
+## <<case "contains:<listfield> $all[<list>]" "contains ''all'' titles in ''&lt;list>''">>

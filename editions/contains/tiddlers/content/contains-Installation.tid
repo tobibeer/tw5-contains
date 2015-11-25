@@ -1,0 +1,16 @@
+created: 20151125111527646
+creator: Tobias Beer
+modified: 20151125113219109
+modifier: Tobias Beer
+tags: 
+title: contains-Installation
+type: text/vnd.tiddlywiki
+
+drag to your wiki, save, reload: [[$:/plugins/tobibeer/contains]]
+
+!! Core Proposal
+
+The following issue proposes the `contains[]` filter to the core:
+
+''#1216 filter operator for "list contains an item or any / all items of another list"''
+https://github.com/Jermolene/TiddlyWiki5/issues/1216

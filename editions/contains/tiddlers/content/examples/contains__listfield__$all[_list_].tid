@@ -1,0 +1,73 @@
+created: 20151125104122835
+creator: Tobias Beer
+listfield: foo bar baz
+modified: 20151125112153281
+modifier: Tobias Beer
+summary: {{contains!!listfield}} contains ''all'' titles in ''list''
+tags: contains
+title: contains:<listfield> $all[<list>]
+type: text/vnd.tiddlywiki
+
+Using a variable:
+
+```
+<$vars list="foo bar">
+<dl>
+<$list filter="[contains:listfield $all<list>]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!listfield}}</dd>
+</$list>
+</dl>
+</$vars>
+```
+
+<<<
+<$vars list="foo bar">
+<dl>
+<$list filter="[contains:listfield $all<list>]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!listfield}}</dd>
+</$list>
+</dl>
+</$vars>
+<<<
+
+If the items should be single words, you can use them directly in the operand:
+
+```
+<dl>
+<$list filter="[contains:listfield $all[foo bar]]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!listfield}}</dd>
+</$list>
+</dl>
+```
+
+<<<
+<dl>
+<$list filter="[contains:listfield $all[foo bar]]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!listfield}}</dd>
+</$list>
+</dl>
+<<<
+
+Does not find matches, because no tiddler is listing "bar baz" in the field ''field'':
+
+```
+<dl>
+<$list filter="""[contains:listfield $all[foo "bar baz"]]""" emptyMessage="""none for "bar baz" """>
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!listfield}}</dd>
+</$list>
+</dl>
+```
+
+<<<
+<dl>
+<$list filter="""[contains:listfield $all[foo "bar baz"]]""" emptyMessage="""none for "bar baz" """>
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!listfield}}</dd>
+</$list>
+</dl>
+<<<

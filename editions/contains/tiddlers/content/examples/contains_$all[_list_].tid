@@ -1,0 +1,66 @@
+created: 20151125070738462
+creator: Tobias Beer
+modified: 20151125112448913
+modifier: Tobias Beer
+summary: {{contains!!titles}} contain ''all'' titles in ''&lt;list>''
+tags: contains
+title: contains:$all[<list>]
+type: text/vnd.tiddlywiki
+
+You can use single word titles directly:
+
+```
+{{{ foo bar baz [contains:$all[foo bar]] }}}
+```
+
+<<<
+{{{ foo bar baz [contains:$all[foo bar]] }}}
+<<<
+
+Or use a variable:
+
+```
+<$vars list="foo bar baz">
+
+<$list filter="foo bar +[contains:$all<list>]" emptyMessage="doesn't"/>
+</$vars>
+```
+
+<<<
+<$vars list="foo bar baz">
+
+<$list filter="foo bar +[contains:$all<list>]" emptyMessage="doesn't"/>
+</$vars>
+<<<
+
+Once more chaining the contains filter in a filter run:
+
+```
+<$vars list="contains:<listfield>[<value>] contains[<value>]">
+
+{{{ [tag[contains]contains:$all<list>] }}}
+</$vars>
+```
+
+<<<
+<$vars list="contains:<listfield>[<value>] contains[<value>]">
+
+{{{ [tag[contains]contains:$all<list>] }}}
+</$vars>
+<<<
+
+Some extraneous character and nothing passes:
+
+```
+<$vars list="contains:field[<value>] contains:[<value>]">
+
+<$list filter="[tag[contains]contains:$all<list>]" emptyMessage="find the error ;-)"/>
+</$vars>
+```
+
+<<<
+<$vars list="contains:field[<value>] contains:[<value>]">
+
+<$list filter="[tag[contains]contains:$all<list>]" emptyMessage="find the error ;-)"/>
+</$vars>
+<<<

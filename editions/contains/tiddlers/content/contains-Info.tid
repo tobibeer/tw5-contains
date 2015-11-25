@@ -1,0 +1,35 @@
+created: 20151125111607401
+creator: Tobias Beer
+modified: 20151125114815491
+modifier: Tobias Beer
+tags: 
+title: contains-Info
+type: text/vnd.tiddlywiki
+
+\define intro(which) <br>@@.summary {{contains!!$which$}}...@@
+\define case(title)
+<$tiddler tiddler="""$title$""">
+@@.summary {{!!summary}}@@<br>
+<code><$link><$view field="title"/></$link></code>
+</$tiddler>
+\end
+
+The plugin [[$:/plugins/tobibeer/contains]] provides the filter:
+
+; contains[]
+: @@.summary returns all input titles whose title / titles in a list-field contain a single title or any/all titles specified in the operand@@
+; Variants
+:@@.summary click links below for examples...@@
+
+<div class="contains-variants">
+
+# ''compare input titles against title(s) in the operand:''<<intro titles>>
+## <<case "contains[<value>]">>
+## <<case "contains:$any[<list>]">>
+## <<case "contains:$all[<list>]">>
+# ''compare list fields of input titles against title(s) in the operand:''<<intro listfield>>
+## <<case "contains:<listfield>[<value>]">>
+## <<case "contains:<listfield> $any[<list>]">>
+## <<case "contains:<listfield> $all[<list>]">>
+
+</div><style>.contains-variants li li .intro {display:none}</style>

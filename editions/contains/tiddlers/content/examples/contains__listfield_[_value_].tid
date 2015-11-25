@@ -1,0 +1,27 @@
+created: 20151125104022060
+creator: Tobias Beer
+listfield: foo bar
+modified: 20151125112019206
+modifier: Tobias Beer
+summary: {{contains!!listfield}} contains ''&lt;value>''
+tags: contains
+title: contains:<listfield>[<value>]
+type: text/vnd.tiddlywiki
+
+```
+<dl>
+<$list filter="[contains:listfield[foo]]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!field}}</dd>
+</$list>
+</dl>
+```
+
+<<<
+<dl>
+<$list filter="[contains:listfield[foo]]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!field}}</dd>
+</$list>
+</dl>
+<<<

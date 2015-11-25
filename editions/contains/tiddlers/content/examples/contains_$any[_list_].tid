@@ -1,0 +1,80 @@
+created: 20151125103412095
+creator: Tobias Beer
+modified: 20151125112751329
+modifier: Tobias Beer
+summary: {{contains!!titles}} contain ''any'' titles in ''&lt;list>''
+tags: contains
+title: contains:$any[<list>]
+type: text/vnd.tiddlywiki
+
+You can use titles that are single words directly.
+
+```
+{{{ foo bar baz [contains:$any[foo bar]] }}}
+```
+
+<<<
+{{{ foo bar baz [contains:$any[foo bar]] }}}
+<<<
+
+Even with quotes:
+
+```
+{{{ "foo bar" baz [contains:$any["foo bar" "no match here, but who cares"]] }}}
+```
+
+<<<
+{{{ "foo bar" baz [contains:$any["foo bar" "no match here, but who cares"]] }}}
+<<<
+
+Or use a variable:
+
+```
+<$vars list="foo bar baz">
+
+{{{ foo bar +[contains:$any<list>] }}}
+
+</$vars>
+```
+
+<<<
+<$vars list="foo bar baz">
+
+{{{ foo bar +[contains:$any<list>] }}}
+
+</$vars>
+<<<
+
+Doesn't contain titles:
+
+```
+<$vars list="no not these">
+
+<$list filter="foo bar +[contains:$any<list>]" emptyMessage="doesn't"/>
+
+</$vars>
+```
+
+<<<
+<$vars list="no not these">
+
+<$list filter="foo bar +[contains:$any<list>]" emptyMessage="doesn't"/>
+
+</$vars>
+<<<
+
+Once more, letting them all pass if there's a single match:
+
+```
+<$vars list="contains:<listfield>[<value>] notThisOne">
+
+{{{ [tag[contains]contains:$any<list>] }}}
+</$vars>
+```
+
+<<<
+<$vars list="contains:<listfield>[<value>] notThisOne">
+
+{{{ [tag[contains]contains:$any<list>] }}}
+</$vars>
+<<<

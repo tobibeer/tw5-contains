@@ -1,0 +1,53 @@
+created: 20151125104159292
+creator: Tobias Beer
+listfield: foo
+modified: 20151125112110836
+modifier: Tobias Beer
+summary: {{contains!!listfield}} contains ''any'' titles in ''list''
+tags: contains
+title: contains:<listfield> $any[<list>]
+type: text/vnd.tiddlywiki
+
+Can use single word titles directly:
+
+```
+<dl>
+<$list filter="[contains:listfield $any[foo bar]]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!field}}</dd>
+</$list>
+</dl>
+```
+
+<<<
+<dl>
+<$list filter="[contains:listfield $any[foo bar]]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!field}}</dd>
+</$list>
+</dl>
+<<<
+
+Or using a variable:
+
+```
+<$vars list="baz">
+<dl>
+<$list filter="[contains:listfield $any<list>]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!field}}</dd>
+</$list>
+</dl>
+</$vars>
+```
+
+<<<
+<$vars list="baz">
+<dl>
+<$list filter="[contains:listfield $any<list>]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!field}}</dd>
+</$list>
+</dl>
+</$vars>
+<<<
