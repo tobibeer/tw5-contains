@@ -1,7 +1,7 @@
 created: 20151125104159292
 creator: Tobias Beer
 listfield: foo
-modified: 20151125112110836
+modified: 20151125131837664
 modifier: Tobias Beer
 summary: {{contains!!listfield}} contains ''any'' titles in ''list''
 tags: contains
@@ -14,7 +14,7 @@ Can use single word titles directly:
 <dl>
 <$list filter="[contains:listfield $any[foo bar]]">
 <dt><$link><$view field="title"/></$link></dt>
-<dd>''field:'' {{!!field}}</dd>
+<dd>''listfield:'' {{!!listfield}}</dd>
 </$list>
 </dl>
 ```
@@ -23,7 +23,7 @@ Can use single word titles directly:
 <dl>
 <$list filter="[contains:listfield $any[foo bar]]">
 <dt><$link><$view field="title"/></$link></dt>
-<dd>''field:'' {{!!field}}</dd>
+<dd>''listfield:'' {{!!listfield}}</dd>
 </$list>
 </dl>
 <<<
@@ -35,7 +35,7 @@ Or using a variable:
 <dl>
 <$list filter="[contains:listfield $any<list>]">
 <dt><$link><$view field="title"/></$link></dt>
-<dd>''field:'' {{!!field}}</dd>
+<dd>''listfield:'' {{!!listfield}}</dd>
 </$list>
 </dl>
 </$vars>
@@ -46,7 +46,7 @@ Or using a variable:
 <dl>
 <$list filter="[contains:listfield $any<list>]">
 <dt><$link><$view field="title"/></$link></dt>
-<dd>''field:'' {{!!field}}</dd>
+<dd>''listfield:'' {{!!listfield}}</dd>
 </$list>
 </dl>
 </$vars>
