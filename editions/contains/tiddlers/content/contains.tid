@@ -3,7 +3,7 @@ creator: Tobias Beer
 listfield: <span class="intro">returns those input titles where the ''&lt;listfield>''</span>
 modified: 20151125113600553
 modifier: Tobias Beer
-tabs: Info Installation Versions
+tabs: Info Install
 tags: Plugins Filters
 title: contains
 titles: <span class="intro">returns ''all input titles'', unmodified, if the input titles</span>
