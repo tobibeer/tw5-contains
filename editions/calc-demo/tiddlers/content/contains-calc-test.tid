@@ -1,0 +1,29 @@
+calc: <$calc>5+5</$calc>
+created: 20151125065701126
+creator: Tobias Beer
+modified: 20151125114531119
+modifier: Tobias Beer
+summary: compares the output of [[domtext|dom]] retrieved from a [[calc|mklauber/math.js]]ulation against a specified ''value'' using the [[contains]] filter operator
+tags: contains[<value>]
+title: contains-calc-test
+type: text/vnd.tiddlywiki
+
+; el
+: <span id="special-val">{{!!calc}}</span>
+
+<$set name="val" value=<<domtext special-val>>>
+
+; filter
+: <$list filter="[<val>contains[10]]"/>
+</$set>
+
+```
+; el
+: <span id="special-val">{{!!calc}}</span>
+
+<$set name="val" value=<<domtext special-val>>>
+
+; filter
+: <$list filter="[<val>contains[10]]"/>
+</$set>
+```

@@ -1,0 +1,24 @@
+{
+    "description": "tobibeer/contains demo with tobibeer/dom & math.js",
+    "plugins": [
+        "tiddlywiki/tiddlyweb",
+        "tiddlywiki/filesystem",
+        "mklauber/math.js",
+        "tobibeer/dom"
+    ],
+    "themes": [
+        "tiddlywiki/vanilla",
+        "tiddlywiki/snowwhite"
+    ],
+    "includeWikis": [
+        "../../../tw5-defaults/editions/defaults",
+        "../../../tw5-dom/editions/dom",
+        "../contains"
+    ],
+    "build": {
+        "index": [
+            "--output","../../",
+            "--rendertiddler","$:/plugins/tiddlywiki/tiddlyweb/save/offline","index.html","text/plain"
+        ]
+    }
+}
