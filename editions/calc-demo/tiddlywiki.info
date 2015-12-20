@@ -11,8 +11,8 @@
         "tiddlywiki/snowwhite"
     ],
     "includeWikis": [
-        "../../../tw5-defaults/editions/defaults",
-        "../../../tw5-dom/editions/dom",
+        "../../../defaults/editions/defaults",
+        "../../../dom/editions/dom",
         "../contains"
     ],
     "build": {
