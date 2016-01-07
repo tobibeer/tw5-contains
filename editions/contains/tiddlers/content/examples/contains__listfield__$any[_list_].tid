@@ -1,10 +1,10 @@
 created: 20151125104159292
 creator: Tobias Beer
 listfield: foo
-modified: 20151125131837664
+modified: 20160107104825964
 modifier: Tobias Beer
 summary: {{contains!!listfield}} contains ''any'' titles in ''list''
-tags: contains
+tags: contains Examples
 title: contains:<listfield> $any[<list>]
 type: text/vnd.tiddlywiki
 

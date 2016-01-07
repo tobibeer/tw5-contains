@@ -1,9 +1,9 @@
 created: 20151125073246519
 creator: Tobias Beer
-modified: 20151125114516525
+modified: 20160107104407631
 modifier: Tobias Beer
 summary: {{contains!!titles}} contain ''&lt;value>''
-tags: contains
+tags: contains Examples
 title: contains[<value>]
 type: text/vnd.tiddlywiki
 

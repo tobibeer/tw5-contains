@@ -1,0 +1,29 @@
+created: 20160107111007274
+creator: Tobias Beer
+modified: 20160107111055849
+modifier: Tobias Beer
+summary: examples for the [[contains]] filter
+tags: Examples contains
+title: contains-Examples
+type: text/vnd.tiddlywiki
+
+\define intro(which) <br>@@.summary {{contains!!$which$}}...@@
+\define case(title)
+<$tiddler tiddler="""$title$""">
+@@.summary {{!!summary}}@@<br>
+<code><$link><$view field="title"/></$link></code>
+</$tiddler>
+\end
+
+<div class="contains-variants">
+
+# ''compare input titles against title(s) in the operand:''<<intro titles>>
+## <<case "contains[<value>]">>
+## <<case "contains:$any[<list>]">>
+## <<case "contains:$all[<list>]">>
+# ''compare list fields of input titles against title(s) in the operand:''<<intro listfield>>
+## <<case "contains:<listfield>[<value>]">>
+## <<case "contains:<listfield> $any[<list>]">>
+## <<case "contains:<listfield> $all[<list>]">>
+
+</div><style>.contains-variants li li .intro {display:none}</style>

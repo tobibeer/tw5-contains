@@ -1,10 +1,10 @@
 created: 20151125104022060
 creator: Tobias Beer
 listfield: foo bar
-modified: 20151125131850667
+modified: 20160107104857142
 modifier: Tobias Beer
 summary: {{contains!!listfield}} contains ''&lt;value>''
-tags: contains
+tags: contains Examples
 title: contains:<listfield>[<value>]
 type: text/vnd.tiddlywiki
 

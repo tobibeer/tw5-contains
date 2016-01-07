@@ -1,9 +1,9 @@
 created: 20151125070738462
 creator: Tobias Beer
-modified: 20151125112448913
+modified: 20160107104840168
 modifier: Tobias Beer
 summary: {{contains!!titles}} contain ''all'' titles in ''&lt;list>''
-tags: contains
+tags: contains Examples
 title: contains:$all[<list>]
 type: text/vnd.tiddlywiki
 

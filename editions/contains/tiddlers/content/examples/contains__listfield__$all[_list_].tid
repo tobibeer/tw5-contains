@@ -1,10 +1,10 @@
 created: 20151125104122835
 creator: Tobias Beer
 listfield: foo bar baz
-modified: 20151125112153281
+modified: 20160107104919215
 modifier: Tobias Beer
 summary: {{contains!!listfield}} contains ''all'' titles in ''list''
-tags: contains
+tags: contains Examples
 title: contains:<listfield> $all[<list>]
 type: text/vnd.tiddlywiki
 
