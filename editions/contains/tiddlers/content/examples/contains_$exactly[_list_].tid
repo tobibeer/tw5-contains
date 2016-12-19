@@ -1,0 +1,41 @@
+created: 20161218185834749
+creator: Tobias Beer
+modified: 20161219123523282
+modifier: Tobias Beer
+summary: {{contains!!titles}} contain ''exactly'' those titles in ''&lt;list>''
+tags: contains Examples
+title: contains:$exactly[<list>]
+type: text/vnd.tiddlywiki
+
+You can use single word titles directly:
+
+<<` """{{{ foo bar +[contains:$exactly[foo bar]] }}}""">>
+
+Or use a variable:
+
+<<` """<$vars list="foo bar">
+
+<$list filter="foo bar +[contains:$exactly<list>]" emptyMessage="doesn't">
+<$text text={{!!title}}/><br>
+</$list>
+</$vars>""">>
+
+Since there are more than two, so you get nothing:
+
+<<` """<$vars list="contains:listfield[<value>] contains:[<value>]">
+
+<$list filter="[tag[contains]contains:$exactly<list>]" emptyMessage="as I said, nothing"/>
+</$vars>""">>
+
+{{contains!!negation}}
+
+<<` """{{{ foo bar baz +[!contains:!$exactly[foo bar]] }}}""">>
+
+whereas...
+
+<$macrocall $name="`" text="""<$vars list="foo bar">
+
+<$list filter="bar foo +[!contains:$exactly<list>]" emptyMessage="but the input titles were exactly ''<<list>>''">
+<$text text={{!!title}}/><br>
+</$list>
+</$vars>"""/>

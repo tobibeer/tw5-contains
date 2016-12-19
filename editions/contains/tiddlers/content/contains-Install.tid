@@ -1,8 +1,18 @@
+created: 20161218195432881
+creator: Tobias Beer
+modified: 20161219184803853
+modifier: Tobias Beer
 title: contains-Install
+type: text/vnd.tiddlywiki
 
 <<plugin-install contains>>
 
 !! Version History
+
+; 0.6.0 / 2016-12-18
+: added `$exactly`
+: added ''negation'' support
+: created regression tests for all variants
 
 ; 0.5.0 / 2015-11-25
 : initial release

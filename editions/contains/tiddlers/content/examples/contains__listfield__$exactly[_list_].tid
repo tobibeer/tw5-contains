@@ -1,17 +1,17 @@
-created: 20151125104159292
+created: 20161218185220541
 creator: Tobias Beer
-listfield: foo
-modified: 20161219123508256
+listfield: bar baz
+modified: 20161219123504571
 modifier: Tobias Beer
-summary: {{contains!!listfield}} contains ''any'' titles in ''list''
+summary: {{contains!!listfield}} contains ''exactly'' those titles in ''list''
 tags: contains Examples
-title: contains:<listfield> $any[<list>]
+title: contains:<listfield> $exactly[<list>]
 type: text/vnd.tiddlywiki
 
 Can use single word titles directly:
 
 <<` """<dl>
-<$list filter="[contains:listfield $any[foo bar]]">
+<$list filter="[contains:listfield $exactly[foo]]">
 <dt><$link><$view field="title"/></$link></dt>
 <dd>''listfield:'' {{!!listfield}}</dd>
 </$list>
@@ -19,9 +19,9 @@ Can use single word titles directly:
 
 Or using a variable:
 
-<<` """<$vars list="baz">
+<<` """<$vars list="bar baz">
 <dl>
-<$list filter="[contains:listfield $any<list>]">
+<$list filter="[contains:listfield $exactly<list>]">
 <dt><$link><$view field="title"/></$link></dt>
 <dd>''listfield:'' {{!!listfield}}</dd>
 </$list>
@@ -30,10 +30,8 @@ Or using a variable:
 
 {{contains!!negation}}
 
-In the following example, negation means: "where the field ''listfield'' of the input titles contain none of the titles in the operand":
-
 <<` """<dl>
-<$list filter="[tag[contains]has[listfield]!contains:listfield $any[bar baz]]">
+<$list filter="[tag[contains]has[listfield]!contains:listfield $exactly[foo bar]]">
 <dt><$link><$view field="title"/></$link></dt>
 <dd>''listfield:'' {{!!listfield}}</dd>
 </$list>

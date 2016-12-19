@@ -1,8 +1,9 @@
 created: 20151125113554731
 creator: Tobias Beer
 listfield: <span class="intro">returns those input titles where the ''&lt;listfield>''</span>
-modified: 20160107110948740
+modified: 20161219184811037
 modifier: Tobias Beer
+negation: <h2>Negation</h2>//The below examples demonstrate negated output...//
 tabs: Info Examples Install
 tags: Plugins Filters
 title: contains

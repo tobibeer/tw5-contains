@@ -1,7 +1,7 @@
 created: 20151125104122835
 creator: Tobias Beer
 listfield: foo bar baz
-modified: 20160107104919215
+modified: 20161219123511796
 modifier: Tobias Beer
 summary: {{contains!!listfield}} contains ''all'' titles in ''list''
 tags: contains Examples
@@ -10,47 +10,23 @@ type: text/vnd.tiddlywiki
 
 Using a variable:
 
-```
-<$vars list="foo bar">
+<<` """<$vars list="foo bar">
 <dl>
 <$list filter="[contains:listfield $all<list>]">
 <dt><$link><$view field="title"/></$link></dt>
 <dd>''field:'' {{!!listfield}}</dd>
 </$list>
 </dl>
-</$vars>
-```
-
-<<<
-<$vars list="foo bar">
-<dl>
-<$list filter="[contains:listfield $all<list>]">
-<dt><$link><$view field="title"/></$link></dt>
-<dd>''field:'' {{!!listfield}}</dd>
-</$list>
-</dl>
-</$vars>
-<<<
+</$vars>""">>
 
 If the items should be single words, you can use them directly in the operand:
 
-```
-<dl>
+<<` """<dl>
 <$list filter="[contains:listfield $all[foo bar]]">
 <dt><$link><$view field="title"/></$link></dt>
 <dd>''field:'' {{!!listfield}}</dd>
 </$list>
-</dl>
-```
-
-<<<
-<dl>
-<$list filter="[contains:listfield $all[foo bar]]">
-<dt><$link><$view field="title"/></$link></dt>
-<dd>''field:'' {{!!listfield}}</dd>
-</$list>
-</dl>
-<<<
+</dl>""">>
 
 Does not find matches, because no tiddler is listing "bar baz" in the field ''field'':
 
@@ -71,3 +47,14 @@ Does not find matches, because no tiddler is listing "bar baz" in the field ''fi
 </$list>
 </dl>
 <<<
+
+{{contains!!negation}}
+
+<<` """<$vars list="foo bar">
+<dl>
+<$list filter="[tag[contains]has[listfield]!contains:listfield $all<list>]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>''field:'' {{!!listfield}}</dd>
+</$list>
+</dl>
+</$vars>""">>

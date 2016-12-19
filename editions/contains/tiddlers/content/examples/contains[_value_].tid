@@ -1,39 +1,22 @@
 created: 20151125073246519
 creator: Tobias Beer
-modified: 20160107104407631
+modified: 20161219123533750
 modifier: Tobias Beer
 summary: {{contains!!titles}} contain ''&lt;value>''
 tags: contains Examples
 title: contains[<value>]
 type: text/vnd.tiddlywiki
 
-```
-{{{ [tag[contains]contains<currentTiddler>] }}}
-```
+<<` "{{{ [tag[contains]contains<currentTiddler>] }}}">>
 
-<<<
+<<` "{{{ foo bar baz +[contains[foo]] }}}">>
 
-{{{ [tag[contains]contains<currentTiddler>] }}}
-<<<
+<<` """<$list filter="[tag[contains]contains[none]]" emptyMessage="none"/>""">>
 
-```
-{{{ foo bar baz [contains[foo]] }}}
-```
+{{contains!!negation}}
 
-<<<
-{{{ foo bar baz [contains[foo]] }}}
-<<<
+<<` "{{{ [tag[contains]!contains[DoesntExist]] }}}">>
 
-```
-<$list filter="[tag[contains]contains[none]]" emptyMessage="none"/>
-```
+<<` "{{{ foo bar baz +[!contains[mumble]] }}}">>
 
-> <$list filter="[tag[contains]contains[none]]" emptyMessage="none"/>
-
-<$list filter="[all[current]tagging[]limit[1]]" variable="x">
-
-!! Also see...
-
-{{{ [all[current]tagging[]] }}}
-
-</$list>
+<<` """<$list filter="[tag[contains]!contains<currentTiddler>]" emptyMessage="well, but ''<$text text={{!!title}}/>'' is contained"/>""">>

@@ -1,6 +1,6 @@
 created: 20160107111007274
 creator: Tobias Beer
-modified: 20160107111055849
+modified: 20161219123538704
 modifier: Tobias Beer
 summary: examples for the [[contains]] filter
 tags: Examples contains
@@ -15,15 +15,19 @@ type: text/vnd.tiddlywiki
 </$tiddler>
 \end
 
+''Note:'' All variants support ''negation'' via `!contains ...[...]`.
+
 <div class="contains-variants">
 
 # ''compare input titles against title(s) in the operand:''<<intro titles>>
 ## <<case "contains[<value>]">>
 ## <<case "contains:$any[<list>]">>
 ## <<case "contains:$all[<list>]">>
+## <<case "contains:$exactly[<list>]">>
 # ''compare list fields of input titles against title(s) in the operand:''<<intro listfield>>
 ## <<case "contains:<listfield>[<value>]">>
 ## <<case "contains:<listfield> $any[<list>]">>
 ## <<case "contains:<listfield> $all[<list>]">>
+## <<case "contains:<listfield> $exactly[<list>]">>
 
 </div><style>.contains-variants li li .intro {display:none}</style>
