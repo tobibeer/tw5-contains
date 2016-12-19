@@ -14,3 +14,4 @@ The plugin [[$:/plugins/tobibeer/contains]] provides the filter:
 ; Variants
 : see [[Examples|contains-Examples]]
 : all [[Variants|contains-Examples]] support negation via `!contains`
+: ''Note:'' When passing an empty value or list — except for ''$exactly'' — the contains filter will always return the input titles. In other words an empty value or empty list is always contained in a list being tested.
